@@ -37,7 +37,9 @@ function Projects() {
       </Navbar>
         <h2 align="center">Projects</h2>
         {token}
-        <GetProjects />
+        <div>
+          <GetProjects />
+        </div>
     </div>
   )
 }
