@@ -1,8 +1,27 @@
 import React from 'react';
-import { Navbar, Nav, NavItem, NavbarBrand, NavLink } from 'reactstrap'; 
+import { Navbar, Nav, NavItem, NavbarBrand, NavLink, Alert, UncontrolledAlert } from 'reactstrap'; 
 
 
-const Dashboard = () => (
+export const SignOnAlert = () => {
+  let visited = sessionStorage.getItem('hasVisited')
+  
+  if (!visited) {
+    sessionStorage.setItem('hasVisted', true)
+    return (
+      <div>
+        <UncontrolledAlert color="success">Login Successful!</UncontrolledAlert>
+      </div>
+    )
+  }
+  return ""
+}
+
+
+function Dashboard() {
+
+  //sessionStorage.setItem('hasVisted', false)
+
+  return (
   <div>
     <Navbar color="light" light expand="md">
       <NavbarBrand href="/dashboard">dS</NavbarBrand>
@@ -30,8 +49,15 @@ const Dashboard = () => (
           </NavItem>
         </Nav>
     </Navbar>
-    <h1 align="center">Dashboard</h1>
+    <div>
+      <SignOnAlert />
+    </div>
+    <div>
+      <h1 align="center">Dashboard</h1>
+    </div>
   </div>
-)
+  )
+}
+sessionStorage.setItem('hasVisted', true)
 
 export default Dashboard;
