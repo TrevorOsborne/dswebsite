@@ -4,8 +4,6 @@ import GetProjects from './queryProjects';
 
 
 function Projects() {
-  
-  const token = sessionStorage.getItem('jwtToken');
 
   return (
     <div>
@@ -36,7 +34,6 @@ function Projects() {
           </Nav>
       </Navbar>
         <h2 align="center">Projects</h2>
-        {token}
         <div>
           <GetProjects />
         </div>

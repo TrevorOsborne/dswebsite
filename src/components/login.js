@@ -12,14 +12,14 @@ import { Router, Link, navigate, Redirect } from "@reach/router"
 /************ CSS Styling ************/
 
 var sectionStyle = {
-    width: "100%",
-    height: "210px",
-    display: "block",
-    textAlign: "center",
-    paddingRight: "500px",
-    paddingLeft: "500px",
-    paddingTop: "30px"
-  };
+  width: "100%",
+  height: "210px",
+  display: "block",
+  textAlign: "center",
+  paddingRight: "500px",
+  paddingLeft: "500px",
+  paddingTop: "30px"
+};
 
 var sectionStyle2 = {
   width: "45%",
@@ -76,7 +76,6 @@ const LogIn = ({token, setToken}) => {
                       setToken(login1)
                       sessionStorage.setItem('jwtToken', login1)
                       navigate('/dashboard/') 
-                      {/* TODO change route to /dashboard*/}
                     }
                   }}
                 >
@@ -107,7 +106,7 @@ const LogIn = ({token, setToken}) => {
         <div style={ sectionStyle2 } />
         <div style={ sectionStyle3 } />
       </div>
-    );
+    ); // To put the button back on a row, enclose the button JSX in <Row form></Row> underneath the last </Row> tag.
   };
 
 export default LogIn;
