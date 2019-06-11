@@ -1,12 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Background from '../style/images/dillon-black.png'; 
 import Background2 from '../style/images/design.jpg';
-//import React from 'react';
-import { Col, Row, Button, Form, FormGroup, FormFeedback, Label, Input, FormText, Navbar, Nav, NavItem, NavbarBrand, NavLink } from 'reactstrap'; 
+import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap'; 
 import gql from 'graphql-tag'; // Allows us to write queries inside a component file. Otherwise js doesn't recognize GraphQL queries.
 import { Mutation } from "react-apollo";
 import React, { useState} from 'react';
-import { Router, Link, navigate, Redirect } from "@reach/router"
+import { navigate } from "@reach/router"
 
 
 /************ CSS Styling ************/
